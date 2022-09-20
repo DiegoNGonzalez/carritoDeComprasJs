@@ -1,0 +1,103 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta y bots -->
+    <meta name="description" content="Amoron- web de compras zona oeste">
+    <meta name="keywords" content="shopping, compras" />
+    <meta name="author" content="Diego Gonzalez" />
+    <meta name="copyright" content="DNGV WinterHack2022" />
+    <meta name="robots" content="index nofollow" />
+    <!-- bots de facebook y whatsapp -->
+    <meta property="og:title" content="Amoron- web de compras zona oeste />
+    <meta property="og:description" content="Todos los productos que necesitas para estar a la moda rey" />
+    <meta property="fb:app_id" content="">
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <!-- bots de twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Amoron- web de compras zona oeste" />
+    <meta property="twitter:description" content="Todos los productos que necesitas para estar a la moda rey" />
+    <meta property="twitter:type" content="article" />
+    <meta property="twitter:image" content="" />
+    <meta property="twitter:url" content="" />
+    <meta itemprop="name" content="Amoron- web de compras zona oeste">
+    <!-- favicon -->
+    <link rel="icon" href="" type="image/png" />
+
+    <title>Amoron</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section id="sectionLoading" class="sectionLoading">
+        <h2 class="loading">LOADING</h2>
+        <div class="puntitos"></div>
+    </section>
+    <header id='header' class="header">
+        <div class="boton"> <a href="./index.html"><img src="img/logo.png" alt="" class="logoImg"></a> </div>
+        <div id="otroNav" class="otroNav">
+            <a id="btnElectro" onclick="productosPorCategoria('array0')" href=#>Electronics</a>
+            <a class="btnJewelry" onclick="productosPorCategoria('array1')" href=#>Jewelery</a>
+            <a class="btnMan" onclick="productosPorCategoria('array2')" href=#>Man</a>
+            <a class="btnWoman" onclick="productosPorCategoria('array3')" href=#>Woman</a>
+            <a class="btnCarrito" href=# onclick="funcionCarrito()"> <i id="btnCarrito"
+                    class="fas fa-shopping-cart"></i></a>
+                    <div class="numerito" id="contadorCarrito"></div>
+        </div>
+        
+    </header>
+    <section id="sectionSplash" class="sectionSplash">
+        <div class="divSplash"> <img class="imgSplash" src="./img/0.jpg" alt="monitor"></div>
+        <div class="divSplashTxt">
+            <h2>Titulo del producto</h2>
+            <p>descripcion </p>
+            <h3>precio </h3>
+            <button id="btnComprar" class="btnComprar">COMPRAR</button>
+        </div>
+    </section>
+
+    <section id="sectionCategorias" class="sectionCategorias">
+        <div class="row" id="divCategorias">
+        </div>
+    </section>
+    <section id="sectionProductos" class="sectionProductos">
+        <div class="container col-md-12 divProductos" id="divProductos">
+
+        </div>
+    </section>
+    <section id="sectionCarrito" class="sectionCarrito">
+        <div class="containerUl">
+
+        <ul id="ulCarrito" class="list-group">
+        </ul>
+    </div>
+        <div class="total">
+            <h3 id="totalCompra">TOTAL $000000</h3>
+            <button id="btnComprarCarrito" class="btnComprar">COMPRAR</button>
+
+        </div>
+    </section>
+    <footer>
+        <p> WinterHack 2022 - Escuela Dev Rock</p>
+    </footer>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
