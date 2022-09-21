@@ -21,10 +21,10 @@ let nroRandom = 0;
 let directorioInterno = "";
 let direccion = "";
 let arrayProductos = [];
-let array0 = [];
-let array1 = [];
-let array2 = [];
-let array3 = [];
+let arrayElectronica = [];
+let arrayJoyas = [];
+let arrayHombre = [];
+let arrayMujer = [];
 let guardado = [];
 let arrayCarrito = [];
 let productosCarrito = [];
@@ -35,10 +35,10 @@ let sacoUnRandom = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
 };
 
-//funcion para cargar las categorias en el home una vez lista la api
+//funcion para cargar las categorias en el home una vez lista la api y apagar el loading
 let apiLista = (res) => {
-    const padre = document.getElementById("divCategorias");
-    padre.classList.add("row");
+    const contenedorCategorias = document.getElementById("divCategorias");
+    contenedorCategorias.classList.add("row");
     for (categorias of res) {
         const modelo = `<div class="col-md" id = ${res.indexOf(categorias)}>
     <img data-title ='${res.indexOf(categorias)}' src="./img/${res.indexOf(
@@ -46,7 +46,7 @@ let apiLista = (res) => {
         )}.jpg" alt="">
     <h2 data-title ='${res.indexOf(categorias)}'>${categorias}</h2>
     </div>`;
-        padre.innerHTML += modelo;
+        contenedorCategorias.innerHTML += modelo;
         mostrarLanding();
     }
 };
@@ -77,17 +77,17 @@ fetch("https://fakestoreapi.com/products/categories")
 let detalleCategoria = (arrayProductos) => {
     for (let producto of arrayProductos) {
         if (producto.category == "electronics") {
-            array0.push(producto);
-            localStorage.setItem("array0", JSON.stringify(array0));
+            arrayElectronica.push(producto);
+            localStorage.setItem("arrayElectronica", JSON.stringify(arrayElectronica));
         } else if (producto.category == "jewelery") {
-            array1.push(producto);
-            localStorage.setItem("array1", JSON.stringify(array1));
+            arrayJoyas.push(producto);
+            localStorage.setItem("arrayJoyas", JSON.stringify(arrayJoyas));
         } else if (producto.category == "men's clothing") {
-            array2.push(producto);
-            localStorage.setItem("array2", JSON.stringify(array2));
+            arrayHombre.push(producto);
+            localStorage.setItem("arrayHombre", JSON.stringify(arrayHombre));
         } else {
-            array3.push(producto);
-            localStorage.setItem("array3", JSON.stringify(array3));
+            arrayMujer.push(producto);
+            localStorage.setItem("arrayMujer", JSON.stringify(arrayMujer));
         }
     }
 };
