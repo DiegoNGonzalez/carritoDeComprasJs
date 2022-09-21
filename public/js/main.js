@@ -25,7 +25,6 @@ let array0 = [];
 let array1 = [];
 let array2 = [];
 let array3 = [];
-let categoria = [];
 let guardado = [];
 let arrayCarrito = [];
 let productosCarrito = [];
@@ -36,7 +35,7 @@ let sacoUnRandom = (min, max) => {
     return Math.round(Math.random() * (max - min) + min);
 };
 
-//funcion para cargar las categorias en el home una vez lista la api 
+//funcion para cargar las categorias en el home una vez lista la api
 let apiLista = (res) => {
     const padre = document.getElementById("divCategorias");
     padre.classList.add("row");
@@ -132,7 +131,7 @@ let productosPorCategoria = (categoria) => {
 </div>`;
         divProductos.innerHTML += modeloProductos;
     }
-    apagarSections(sectionProductos) ;
+    apagarSections(sectionProductos);
 };
 //funcion para agregar contador al carrito
 let sumarAlCarrito = (id) => {
@@ -167,18 +166,15 @@ let funcionCarrito = () => {
     contadorCarrito.innerHTML = numeroCompra;
 };
 //funcion para vaciar carrito y localStorage una vez realizada la compra
-let vaciarCarritoYLocal = () => { 
-    
-    arrayCarrito = []
+let vaciarCarritoYLocal = () => {
+    arrayCarrito = [];
     localStorage.setItem("arrayCarrito", JSON.stringify(arrayCarrito));
-    ulCarrito.innerHTML = '';
-    contadorCarrito.innerHTML = '';
-    totalCompra.innerHTML = 'TOTAL $000000';
-    
-    
-}
+    ulCarrito.innerHTML = "";
+    contadorCarrito.innerHTML = "";
+    totalCompra.innerHTML = "TOTAL $000000";
+};
 
-//btn para finalizar proceso 
+//btn para finalizar proceso
 btnComprarCarrito.addEventListener("click", () => {
     alert("Gracias por tu compra :)");
     vaciarCarritoYLocal();

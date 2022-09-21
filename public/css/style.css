@@ -115,6 +115,7 @@ header {
 }
 .sectionSplash {
     display: flex;
+    align-items: center;
     color: var(--color-texto-principal);
 }
 .divSplash {
@@ -125,9 +126,9 @@ header {
     align-items: center;
 }
 .imgSplash {
-    max-height: 70%;
+    max-height: 450px;
     max-width: 90%;
-    margin: 5%;
+    margin: 10px;
 }
 .divSplashTxt {
     width: 50%;
@@ -153,7 +154,10 @@ header {
     background: var(--color-principal);
     color: var(--color-secundario);
 }
-
+.sectionCategorias {
+    align-items: center;
+    justify-content: center;
+}
 .row {
     height: 100%;
     width: 100%;
@@ -165,7 +169,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 8px;
+    margin: 3px 10px;
+    border: 3px ridge #9c27b0;
+    border-radius: 10px;
 }
 .col-md h2 {
     font-size: 28px;
@@ -251,7 +258,7 @@ footer {
     justify-content: space-between;
     margin-top: 15px;
 }
-.containerUl{
+.containerUl {
     margin-top: 80px;
 }
 li p {
@@ -274,13 +281,13 @@ footer p {
     margin: 0px;
     color: var(--color-texto-principal);
 }
+
 @media only screen and (max-width: 768px) {
     .loading {
         margin-top: 20px;
         font-size: 80px;
     }
     .sectionSplash {
-        
         align-items: center;
         margin-bottom: 20px;
     }
@@ -298,10 +305,10 @@ footer p {
 }
 
 @media only screen and (max-width: 440px) {
-    section{
-        min-height:100vh ;
+    section {
+        min-height: 100vh;
     }
-    .sectionSplash{
+    .sectionSplash {
         flex-direction: column;
     }
     .otroNav {
@@ -311,7 +318,7 @@ footer p {
     .otroNav a {
         font-size: 14px;
     }
-    .col-md{
+    .col-md {
         margin-top: 20px;
     }
     .logoImg {
@@ -325,7 +332,7 @@ footer p {
         align-items: center;
         justify-content: center;
         font-size: 14px;
-        padding:10px;
+        padding: 10px;
         height: 30%;
     }
 
@@ -334,7 +341,7 @@ footer p {
         width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 5px ;
+        margin-top: 5px;
     }
     .imgSplash {
         max-height: 40vh;
@@ -350,10 +357,10 @@ footer p {
     .detalleCarrito {
         height: 40px;
     }
-    .tituloDetalleCarrito h4{
-        font-size:12px ;
+    .tituloDetalleCarrito h4 {
+        font-size: 12px;
     }
-    .total h3{
+    .total h3 {
         font-size: 15px;
     }
 }
