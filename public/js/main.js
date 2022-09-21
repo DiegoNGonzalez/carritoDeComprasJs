@@ -47,7 +47,7 @@ let apiLista = (res) => {
     <h2 data-title ='${res.indexOf(categorias)}'>${categorias}</h2>
     </div>`;
         padre.innerHTML += modelo;
-        showPages();
+        mostrarLanding();
     }
 };
 //funcion para cargar un producto random en el Splash
@@ -98,8 +98,8 @@ sectionCategorias.addEventListener("click", (e) => {
     categoria = "array" + directorioInterno;
     productosPorCategoria(categoria);
 });
-//funcion para mostrar paginas
-let showPages = () => {
+//funcion para mostrar landingpage y ocultar loading y demas
+let mostrarLanding = () => {
     sectionLoading.style.display = "none";
     sectionProductos.style.display = "none";
     sectionSplash.style.display = "flex";
