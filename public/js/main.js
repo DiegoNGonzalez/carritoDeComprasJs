@@ -105,6 +105,7 @@ let showPages = () => {
     sectionSplash.style.display = "flex";
     sectionCategorias.style.display = "flex";
     header.style.display = "flex";
+    contadorCarrito.style.display = "block";
     footer.style.display = "flex";
     sectionCarrito.style.display = "none";
 };
